@@ -25,11 +25,15 @@ struct ContentView: View {
                                 topTrailingRadius: 0
                             )
                         )
-                    Text("\(viewModel.umidades.last?.umidade ?? "0")%")
-                        .font(.largeTitle)
-                        .foregroundStyle(Color.white)
-                        .bold()
-                        .padding()
+                    VStack{
+                        Text("Última leitura")
+                            .foregroundStyle(Color.white)
+                        Text("\(viewModel.umidades.last?.umidade ?? "0")%")
+                            .font(.largeTitle)
+                            .foregroundStyle(Color.white)
+                            .bold()
+                    }
+                    .padding()
                 }
                 VStack{
                     ScrollView{
